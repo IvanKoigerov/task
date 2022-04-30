@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сайтик</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link href="../dist/css/style.min.css" rel="stylesheet" type="text/css" />
+   <link rel="icon" href="../img/Title.png">
+   
+</head>
+<body>
+   
+   <!-- / Header  -->
+
+   <header class="header fixed-top">
+      <nav class="navbar nav-masthead  d-flex navbar-expand-md navbar-dark bg-mydark">
+         <div class="container-lg">
+           <a class="navbar-brand"><img src="../img/icon.png" alt="" class="header-logo"></a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../index.html">
+                     <svg fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                     </svg>Главная
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active">
+                     <svg fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                     </svg>Карта
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./Timer.html">
+                     <svg fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                     </svg>Таймер
+                  </a>
+                </li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+   </header>
+
+   <!-- / Header  -->
+
+   
+   <!--   Main   -->
+
+   <main class="main container-lg">
+      <section class="section-map">
+         <div class="bg-mydark map-box">
+            <div class="box-loader bg-mydark">
+               <div class="loader"></div>
+            </div>
+            <div class="map" id="map">
+               <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+               </script>
+
+               <!-- <iframe class="map" onload="hideload()" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa22af0019ed10fe7661e89da72e82a8269929a4ffb8cbc822d873d7870ff294f&amp;source=constructor"  frameborder="0"></iframe> -->
+            </div>
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa22af0019ed10fe7661e89da72e82a8269929a4ffb8cbc822d873d7870ff294f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
+         </div>
+      </section>
+   </main>
+
+   <!-- /  Main   -->
+
+
+   <footer class="footer bg-dark">
+      <ul class="flex-list-center footer-list">
+         <li class="footer-item">
+            <a href="https://vk.com/vkoygerov" class="link footer-link"> 
+               <svg class="footer-link__svg">
+                  <use class="footer-link__svg" href="../img/social.svg#vk"></use>
+               </svg>
+            </a>
+         </li>
+
+         <li class="footer-item">
+            <a href="https://t.me/an1meboy" class="link footer-link">
+               <svg class="footer-link__svg">
+                  <use class="footer-link__svg" href="../img/social.svg#tg"></use>
+               </svg>
+            </a>
+         </li>
+
+         <li class="footer-item">
+            <a href="https://github.com/IvanKoigerov" class="link footer-link">
+               <svg class="footer-link__svg">
+                  <use class="footer-link__svg" href="../img/social.svg#github"></use>
+               </svg>
+            </a>
+         </li>
+
+         <li class="footer-item">
+            <a href="https://discordapp.com/users/0954/" class="link footer-link">
+               <svg class="footer-link__svg">
+                  <use class="footer-link__svg" href="../img/social.svg#discord"></use>
+               </svg>
+            </a>
+         </li>
+      </ul>
+
+      <ul class="flex-list-center footer-list">
+
+         <li class="footer-item">
+            <a href="../index.html" class="link footer-link">
+               Info
+            </a>
+         </li>
+
+         <li class="footer-item">
+            <a href="./Map.html" class="link footer-link">
+               Map
+            </a>
+         </li>
+
+         <li class="footer-item">
+            <a href="./Timer.html" class="link footer-link">
+               Timer
+            </a>
+         </li>
+      </ul>
+
+      <p class="footer-corp">
+         Copyright © 2021 corp. 
+      </p> 
+   </footer>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="../src/js/map.js"></script>
+</body>
+</html>
