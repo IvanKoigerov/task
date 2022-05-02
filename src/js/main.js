@@ -252,7 +252,7 @@ function timerText() {
 
 // === Page Change ===
 
-page = document.querySelector('#page');
+const page = document.querySelector('#page');
 
 window.addEventListener('load', () => {
    loadPage(window.location.hash);
