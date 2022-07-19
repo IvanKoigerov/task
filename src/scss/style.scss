@@ -1,0 +1,344 @@
+// === Import ===
+
+@import "normalize.scss";
+@import "viriable.scss";
+@import "mixin.scss";
+
+// === Common ===
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: 16px;
+}
+
+body {
+   background-color: $dark2-color;
+}
+
+.bg-mydarkOp {
+   background-color: $dark-color-op75;
+}
+
+.bg-mydark {
+   background-color: $dark-color;
+}
+
+.flex-list-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   padding: 0;
+}
+
+.link {
+   display: block;
+   color: $light-color-op55;
+
+   &:hover {
+      color: $light-color-op75;
+   }
+}
+
+.main {
+   min-height: 90vh;
+   overflow: hidden;
+}
+
+// === Header ===
+
+.header {
+   font-size: 14px;
+}
+
+@media (min-width:$screen-sm) {
+   .nav-link {
+      display: grid;
+      justify-items: center;
+
+      &.active {
+         pointer-events: none;
+      }
+   }
+}
+
+
+
+.header-logo {
+   height: 50px;
+}
+
+.navbar {
+   padding: 2px 0;
+}
+
+.nav-item {
+   margin-right: 30px;
+
+   svg {
+      height: 24px;
+
+      @media (max-width:$screen-sm) {
+         margin-right: 15px;
+      }
+   }
+
+   @media (max-width:$screen-sm) {
+      font-size: 1.1rem;
+   }
+}
+
+
+// === Main ===
+
+.main {
+   padding-top: 65px;
+}
+
+.photo {
+   height: 100%;
+}
+
+.section-info {
+   margin: 20px 0;
+   display: grid;
+   gap: 20px;
+}
+
+.user-info {
+   color: $light-color-op75;
+   padding: 20px;
+
+   @media (min-width:$screen-lg) {
+      svg {
+         width: 24px;
+         height: 24px;
+      }
+   }
+
+   @media (max-width:$screen-sm-max) {
+      svg {
+         width: 30px;
+         height: 30px;
+      }
+   }
+
+   .info-item:not(:first-child) {
+      margin-left: 15px;
+   }
+}
+
+.user-title {
+   margin-bottom: 20px;
+}
+
+.user-sub-title {
+   margin-bottom: 20px;
+}
+
+.photo-box {
+   width: 230px;
+   height: 230px;
+   border-radius: 50%;
+   border: 2px solid black;
+   overflow: hidden;
+   margin-bottom: 20px;
+}
+
+@media (min-width:$screen-lg) {
+   .section-info {
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 425px;
+   }
+}
+
+@media (max-width:$screen-sm-max) {
+   .section-info {
+      grid-template-rows: 425px 425px;
+   }
+
+   .user-title {
+      font-size: 1.5rem;
+   }
+
+   .user-sub-title {
+      font-size: 1.25rem;
+   }
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+   height: 100%;
+}
+
+.carousel-item {
+
+   h1,
+   p {
+      color: $light-color-op75;
+   }
+}
+
+.text-box {
+   border-radius: 10px;
+}
+
+.text-box h1 {
+   width: max-content;
+   border-radius: 10px;
+   padding: 10px 20px;
+}
+
+.text-box p {
+   margin-top: 10px;
+}
+
+.carousel-caption {
+   border-radius: 10px;
+}
+
+.section-cards {
+   margin-bottom: 20px;
+}
+
+.card {
+   min-height: 400px;
+}
+
+.card,
+.card a {
+   overflow: hidden;
+}
+
+.card,
+.card img {
+   border: none;
+   border-radius: 0;
+   @include transition
+}
+
+.card img:hover {
+   transform: scale(1.15);
+}
+
+
+
+
+
+.card-box {
+   color: $light-color-op75;
+   display: grid;
+   gap: 20px;
+
+   @media (min-width:$screen-lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   @media (max-width:$screen-sm-max) {
+      grid-template-rows: 1fr 1fr max-content;
+   }
+}
+
+.map-box {
+   margin: 20px 0;
+   height: 80vh;
+   padding: 20px;
+   position: relative;
+}
+
+.box-loader {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   z-index: 10;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.loader {
+   width: 125px;
+   height: 125px;
+   border: 18px solid $light-color-op75;
+   border-radius: 50%;
+   border-top-color: #fd9b39;
+   animation: 0.44s load infinite linear 0s;
+}
+
+.hide {
+   display: none !important;
+}
+
+@keyframes load {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg)
+   }
+}
+
+.map {
+   width: 100%;
+   height: 100%;
+}
+
+.section-time {
+   color: $light-color-op75;
+   margin: 20px;
+   padding: 20px;
+}
+
+.section-time h1 {
+   margin-top: 0;
+}
+
+.timer {
+   display: flex;
+   font-size: 20px;
+
+   &-time {
+      &:not(:last-child) {
+         margin-right: 5px;
+      }
+
+      &:not(:first-child) {
+         margin-left: 5px;
+      }
+   }
+}
+
+
+
+// === Footer ===
+
+.footer {
+   padding: 40px;
+
+   &-list {
+      margin-bottom: 40px;
+   }
+
+   &-item:not(:last-child) {
+      margin-right: 30px;
+   }
+
+   svg {
+      width: 45px;
+      height: 45px;
+   }
+
+   &-corp {
+      margin: 0;
+      text-align: center;
+      color: $light-color-op25;
+   }
+}
